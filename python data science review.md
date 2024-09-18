@@ -41,3 +41,48 @@ Explain why one needs to use '&' instead of 'and' (or '|' instead of or) when su
 ```py
 df[(df['W']>0) & (df['Y'] > 1)]
 ```
+
+When do you use .loc and why are you using it twice here? 
+
+```python
+df.loc["G1"].loc[1]
+df.loc["G2"].loc[2]["B"].item()
+```
+
+When do you use
+       
+       df.dropna()
+       df.fillna()
+       df.groupby()
+              .min()
+              .max()
+              .sum()
+              .mean()
+              .std()
+
+What does df.groupby() create?
+
+What is the difference between using pd.merge() and pd.join()? 
+
+Show an example of these
+
+       df[].unique()
+       df[].value_counts()
+       df[].apply()
+
+What does this do?
+
+       df.loc[0:1][["col1", "col2"]].sum(axis=1)
+
+What question does this answer?
+       
+       df.groupby("Year")["BasePay"].mean().apply(lambda x: round(x, 2))
+
+What role does "en" play in this Series? In other words, what is it? 
+
+       df["Language"].value_counts()["en"].item()
+
+What is this doing?
+
+       top_domain_names = ecom['Email'].str.split('@').str[1].value_counts().head(5)
+
