@@ -42,7 +42,7 @@ Explain why one needs to use '&' instead of 'and' (or '|' instead of or) when su
 df[(df['W']>0) & (df['Y'] > 1)]
 ```
 
-When do you use .loc and why are you using it twice here? 
+When do you use .loc and why are you using it twice here?
 
 ```python
 df.loc["G1"].loc[1]
@@ -50,7 +50,7 @@ df.loc["G2"].loc[2]["B"].item()
 ```
 
 When do you use
-       
+
        df.dropna()
        df.fillna()
        df.groupby()
@@ -62,7 +62,7 @@ When do you use
 
 What does df.groupby() create?
 
-What is the difference between using pd.merge() and pd.join()? 
+What is the difference between using pd.merge() and pd.join()?
 
 Show an example of these
 
@@ -75,10 +75,10 @@ What does this do?
        df.loc[0:1][["col1", "col2"]].sum(axis=1)
 
 What question does this answer?
-       
+
        df.groupby("Year")["BasePay"].mean().apply(lambda x: round(x, 2))
 
-What role does "en" play in this Series? In other words, what is it? 
+What role does "en" play in this Series? In other words, what is it?
 
        df["Language"].value_counts()["en"].item()
 
@@ -86,5 +86,26 @@ What is this doing?
 
        top_domain_names = ecom['Email'].str.split('@').str[1].value_counts().head(5)
 
-What does the .str accessor in pandas do?
+# Matplotlib
 
+What % command allows you see plots in Juypter notebooks?
+
+Why do you create a figure object?
+Why do you create an axis object or objects?
+
+What is happening in this code?
+
+```py
+       x = np.linspace(0,5)
+       y = x ** 2
+
+       fig, axes = plt.subplots(nrows = 1, ncols = 2)
+
+       for item in axes:
+              item.plot(x,y)
+
+       axes[0] = "First Plot"
+       axes[1] = "Second Plot"
+```
+
+What does `plt.tight_layout()` do?
