@@ -86,3 +86,5 @@ What is this doing?
 
        top_domain_names = ecom['Email'].str.split('@').str[1].value_counts().head(5)
 
+What does the .str accessor in pandas do?
+
