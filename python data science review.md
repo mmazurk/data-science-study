@@ -137,3 +137,31 @@ How do you create a plot with two subplots that show x^2 and x^3?
 
 Plot a normal distribution in purple
 
+# Seaborn
+
+Load the 'tips' dataset using sns.load_dataset("tips") and create the following:
+
+       sns.histplot()
+       sns.jointplot() with a scatterplot
+       sns.jointplot() with regression line
+       sns.pairplot() with different colors for gender
+
+What does this do?
+       
+       sns.barplot(x='sex',y='total_bill',hue="sex",data=tips, palette={"Male": "grey", "Female": "pink"})
+
+How is sns.barplot different from sns.countplot? 
+
+       sns.boxplot()
+
+HOw do you run a simpel correlation matrix with a heatmap?
+
+       corrs = tips.corr(numeric_only=True)
+
+Load the flights dataset in seaborn and do a pivot table that shows how many passengers were on flights by year.
+
+Now create a heat map of this
+
+       sns.heatmap(pvflights,cmap='magma',linecolor='white',linewidths=1)
+
+*start with grids*
